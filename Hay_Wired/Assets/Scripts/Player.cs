@@ -23,7 +23,12 @@ public class Player : MonoBehaviour {
 		bool touchingGround = collider.IsTouchingLayers (groundLayer);
 		Vector2 velocity = rigidBody.velocity;
 		velocity.x = horizontal * speed;
-		if (jump == true && touchingGround == true) {
+        //float animatorSpeed = Mathf.Abs(velocity.x);
+        //Animator animatorComponent = GetComponent<Animator>();
+        //animatorComponent.SetFloat("speed", animatorSpeed);
+        SpriteRenderer spriteComponent = GetComponent<SpriteRenderer>();
+        spriteComponent.flipX = velocity.x < 0;
+        if (jump == true && touchingGround == true) {
 			velocity.y = jumpSpeed;
 		}
 		rigidBody.velocity = velocity;
