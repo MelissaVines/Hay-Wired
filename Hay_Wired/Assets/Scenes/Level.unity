@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad91b8d75e0af4347a34bbded0944adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHealth: 100
+  m_maxHealth: 2
   m_invulnDuration: 0
   m_destroyOnDeath: 1
   m_targetType: enemy
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eee1330539dd8941b74a25f36e13361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_damage: 10
+  m_damage: 1
   m_targetType: player
 --- !u!1 &214203607
 GameObject:
@@ -318,6 +318,8 @@ GameObject:
   - component: {fileID: 214203614}
   - component: {fileID: 214203615}
   - component: {fileID: 214203616}
+  - component: {fileID: 214203617}
+  - component: {fileID: 214203618}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -468,9 +470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad91b8d75e0af4347a34bbded0944adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHealth: 100
+  m_maxHealth: 2
   m_invulnDuration: 0
-  m_destroyOnDeath: 1
+  m_destroyOnDeath: 0
   m_targetType: player
   m_damageSound: {fileID: 0}
   m_deathSound: {fileID: 0}
@@ -509,6 +511,34 @@ MonoBehaviour:
   m_meleeSound: {fileID: 0}
   m_animator: {fileID: 214203613}
   m_meleeTrigger: Attack
+--- !u!114 &214203617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214203607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fbbc224ed8648b4b1e54f0626014d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_startingLives: 1
+  m_saveKey: lives
+  m_livesDisplay: {fileID: 0}
+  m_gameOverScreen: Start
+--- !u!114 &214203618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214203607}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ba24af33cc042b6a17d0c75f83f6f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_healthPool: {fileID: 0}
+  m_lives: {fileID: 0}
 --- !u!1 &434348276
 GameObject:
   m_ObjectHideFlags: 0
