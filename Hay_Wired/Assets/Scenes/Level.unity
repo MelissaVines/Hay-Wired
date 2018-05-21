@@ -507,8 +507,8 @@ MonoBehaviour:
   m_cooldownDuration: 1
   m_attackButton: Fire1
   m_meleeSound: {fileID: 0}
-  m_animator: {fileID: 0}
-  m_meleeTrigger: 
+  m_animator: {fileID: 214203613}
+  m_meleeTrigger: Attack
 --- !u!1 &434348276
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3cf32a282f04f7b842d614f8097ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_sceneName: 
+  m_sceneName: Victory
   m_requiredButton: 
 --- !u!61 &1594497597
 BoxCollider2D:
